@@ -1,0 +1,22 @@
+h1 {
+    font-style: bold;
+    border: solid 2px;
+    border-radius: 5px;
+    margin-top: 0px;
+    color: black;
+    font-size: 50px;
+    background-color: rgb(189, 189, 189);
+    text-decoration-color: none;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 2px 2px rgb(255, 255, 255);
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+body {
+    background-color: gray;
+}
