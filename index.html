@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Hobbie!</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbie!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="all">
+        <h1>Hobbie!</h1>
+        <button id="start-btn" onclick="start()">Start</button>
 
-<h1>Hobbie</h1>
-<p>Hobbie helps you find more hobbies based on your likes, dislikes, and your current hobbies</p>
-<button onclick= "displaySubClasses()">lets start!</button>
-<p id ="subclasses">e</p>
+        <div id="question-1" style="visibility: hidden;">
+            <h2>Do you like...?</h2>
+            <div class="option" onclick="question2('entertainment')">Entertainment</div>
+            <div class="option" onclick="question2('work')">Work</div>
+            <div class="option" onclick="question2('creative')">Being creative</div>
+        </div>
 
+        <div id="question-2-entertainment" style="visibility: hidden;">
+            <h2>Entertainment: What kind?</h2>
+            <div class="option" onclick="showResult('movies')">Movies</div>
+            <div class="option" onclick="showResult('video games')">Video Games</div>
+            <div class="option" onclick="showResult('reading')">Reading</div>
+        </div>
+
+         <div id="question-2-work" style="visibility: hidden;">
+            <h2>Work: What kind?</h2>
+            <div class="option" onclick="showResult('programming')">Programming</div>
+            <div class="option" onclick="showResult('writing')">Writing</div>
+            <div class="option" onclick="showResult('teaching')">Teaching</div>
+        </div>
+
+        <div id="question-2-creative" style="visibility: hidden;">
+            <h2>Creative: What kind?</h2>
+            <div class="option" onclick="showResult('painting')">Painting</div>
+            <div class="option" onclick="showResult('music')">Music</div>
+            <div class="option" onclick="showResult('writing')">Writing</div>
+        </div>
+
+        <div id="result" style="visibility: hidden;">
+            <h2>I suggest you do something that has to do with:</h2>
+            <p id="hobby"></p>
+            <p id="description"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
