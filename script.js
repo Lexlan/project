@@ -23,11 +23,17 @@ const hobbyDescriptions = {
 function start() {
     document.getElementById('start-btn').style.visibility = 'hidden';
     document.getElementById('question-1').style.visibility = 'visible';
-    const newDiv = document.createElement("div");
-    newDiv.innerHTML = "HI"
-    document.getElementById('all').appendChild(newDiv);
-    const currentDiv = document.getElementById('Start-btn');
-    document.body.insertBefore(newDiv, currentDiv);
+    let positionLeft = 600
+    for (let i = 0; i < 3; i++) {
+        const newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "hobby-button");
+        newDiv.style.left = positionLeft
+        newDiv.innerHTML = "HI";
+        document.getElementById('all').appendChild(newDiv);
+        const currentDiv = document.getElementById('Start-btn');
+        document.body.insertBefore(newDiv, currentDiv);
+      }
+
 
 }
 
