@@ -20,26 +20,36 @@ const hobbyDescriptions = {
     "music": "Play instruments, or you could sing, or maybe produce beats."
 };
 
-function start() {
-    document.getElementById('start-btn').style.visibility = 'hidden';
-    document.getElementById('question-1').style.visibility = 'visible';
-    let positionLeft = 600
-    for (let i = 0; i < 3; i++) {
+function createQButton(num) {
+    for (let i = 0; i < num; i++) {
+        numQ = 1
+        left = 15
         const newDiv = document.createElement("div");
         newDiv.setAttribute("class", "hobby-button");
-        newDiv.style.left = positionLeft
-        newDiv.innerHTML = "HI";
+        newDiv.style.left = left + "px";
+        newDiv.innerHTML = "question" + numQ;
         document.getElementById('all').appendChild(newDiv);
-        const currentDiv = document.getElementById('Start-btn');
-        document.body.insertBefore(newDiv, currentDiv);
+        const currentDiv = document.getElementById('all');
+        document.body.insertAfter(newDiv, currentDiv);
+        numQ++
+        Left = left + 50
       }
+      
+}
+
+function start() {
+    document.getElementById('start-btn').style.visibility = 'hidden';
+    createQButton(3);
+    document.getElementById('question1').style.visibility = 'visible';
+    let positionLeft = 600
+    
 
 
 }
 
 function question2(topic) {
-    document.getElementById('question-1').style.visibility = 'hidden';
-    document.getElementById('question-2-' + topic).style.visibility = 'visible';
+    document.getElementById('question1').style.visibility = 'hidden';
+    document.getElementById('question2' + topic).style.visibility = 'visible';
 }
 
 function showResult(hobby) {
